@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>Canvas timeline</title>
+	<link href="css/app.css" rel="stylesheet">
+	<script src="js/canvasTimeline.js"></script>
+</head>
+
+<body>
+	<canvas id="timeline">
+		Canvas not supported!
+	</canvas>
+
+	<section>
+		<h1>Simple UI</h1>
+		<input id="timeInput" placeholder="Enter time in seconds...">
+		<select id="teamSelect">
+			<option disabled selected>Select the Team...</option>
+			<option value="0">Home</option>
+			<option value="1">Away</option>
+		</select>
+		<button id="addActionBtn">Add to timeline</button>
+	</section>
+</body>
+<script>
+	window.onload = function() {
+		var canvasTimeline = new CanvasTimeline();
+
+		canvasTimeline.init(3600);
+	};
+
+</script>
+
+</html>
